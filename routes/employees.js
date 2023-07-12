@@ -2,7 +2,7 @@ const express = require("express");
 
 const { auth } = require("../middleware/auth");
 const { all, add } = require("../controllers/employees");
-const router = require("./users");
+const router = express.Router();
 
 // /api/employees
 router.get("/", auth, all);
